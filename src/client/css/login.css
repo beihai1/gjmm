@@ -1,0 +1,19 @@
+.user_loginsx{ width:1200px; margin:0px auto;}
+.user_loginsx .login_right{ width:425px; margin:0px auto;}
+.user_loginsx .login_right .user_tel {width:400px; height:30px; line-height:30px; font-size:14px; padding:10px; margin-top:0px; color:#b9b9b9; border:solid 1px #ebebeb; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;}
+.user_loginsx .login_right .user_pass {width:400px; height:30px; line-height:30px; font-size:14px; padding:10px; margin-top:25px; color:#b9b9b9; border:solid 1px #ebebeb; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;}
+.user_loginsx .login_right input.tel_yzm {width:220px; height:30px; line-height:30px; font-size:14px; padding:10px; margin-top:25px; color:#b9b9b9; border:solid 1px #ebebeb; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; float:left;}
+.user_loginsx .login_right .capt_pic{ display:block; width:140px; height:50px; margin-left:20px; margin-top:25px; text-align:center; border:solid 1px #ebebeb; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; float:right;}
+.user_loginsx .login_right .capt_pic img{ margin-top:15px;}
+.user_loginsx .login_right #tel_dtyzmx{ width:140px; height:50px; line-height:50px; margin-top:25px; text-align:center; font-size:14px; color:#ff2837; border:solid 1px #ff2837; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; float:right;}
+.user_loginsx .login_right #tel_dtyzmx a{ display:block; color:#ff2837; text-decoration:none;}
+.user_loginsx .login_right #dtyzmts {margin-left:5px; color:#ff2837;}
+.user_loginsx .login_right .login_but .login_subm { width:420px; height:50px; padding:0; margin:35px 0px; line-height:50px; background-color:#ff2837; color:#fff; font-size:20px; font-family:"PingFang SC Regular"; border:none; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;}
+.user_loginsx .login_right .hezuo_tit {color:#333; height:30px; line-height:30px; text-align:center; font-size:16px; font-family:"PingFang SC Regular"; margin-top:20px;}
+.user_loginsx .login_right .hezuo {margin:20px 0 0 70px;}
+.user_loginsx .login_right .hezuo a{ padding-left:40px;}
+.user_loginsx .login_right .hezuo img {vertical-align:middle; width:80px;}
+.user_loginsx .login_right .agreess { height:20px; margin:80px 0px 100px 85px;}
+.user_loginsx .login_right input.agree{ width:20px; height:20px; padding:0; margin:0; line-height:20px; color:#ff2837; float:left;}
+.user_loginsx .login_right .agrees { height:20px; color:#333; font-size:14px; line-height:20px; margin-left:8px;float:left;}
+.user_loginsx .login_right .agrees a {color:#333;}

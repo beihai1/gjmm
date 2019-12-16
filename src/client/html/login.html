@@ -1,0 +1,106 @@
+<div class="user_loginsx">
+    <div class="gjmm_common_title">
+        <div class="tit_chi"><span>会员</span>安全登录</div>
+        <div class="tit_eng">Secure login</div>
+    </div>
+
+    <div class="login_right">
+
+        <div id="teldt">
+            <form name="formtel" action="user.php" method="post" onsubmit="return telLogin()" id="telForm">
+                <input name="usertel" type="text" value="手机号码" class="user_tel"
+                    onclick="if(this.value=='手机号码') {this.value='';} this.style.color='#000';"
+                    onblur="if(this.value=='') {this.value='手机号码'; this.style.color='#b9b9b9';}">
+                <div class="clear"></div>
+                <div><input type="text" size="8" name="captcha" class="tel_yzm" value="识别码"
+                        onclick="if(this.value=='识别码') {this.value='';} this.style.color='#000';"
+                        onblur="if(this.value=='') {this.value='识别码'; this.style.color='#b9b9b9';}"><span
+                        class="capt_pic"><img src="captcha.php?is_login=1&amp;" alt="captcha"
+                            onclick="this.src='captcha.php?is_login=1&amp;'+Math.random()"></span></div>
+                <div class="clear"></div>
+                <input name="" type="text" value="动态码" id="txx" class="tel_yzm"><input name="tel_password" type="text"
+                    style="display:none;" id="pwdx" class="tel_yzm">
+                <div id="tel_dtyzmx"><a href="javascript:" onclick="tel_dtyzm()">获取动态码</a></div>
+                <div class="clear"></div>
+                <div id="dtyzmts"></div>
+                <script type="text/javascript">
+                    var txx = document.getElementById("txx"), pwdx = document.getElementById("pwdx");
+                    txx.onfocus = function () {
+                        if (txx.value != "动态码") return;
+                        txx.style.display = "none";
+                        pwdx.style.display = "";
+                        pwdx.value = "";
+                        pwdx.focus(pwdx.style.color = '#000');
+                    }
+                    pwdx.onblur = function () {
+                        if (pwdx.value != "") { pwdx.style.color = '#000'; return; }
+                        pwdx.style.display = "none";
+                        txx.style.display = "";
+                        txx.value = "动态码";
+                    }
+                    function tel_dtyzm() {
+                        var tel = formtel.usertel.value;
+                        var captcha = formtel.captcha.value;
+                        Ajax.call('teldtyzm_ajax.php', 'act=dtyzm&ion=login&tel=' + tel + '&captcha=' + captcha, dtyzmResponse, 'GET', 'JSON', '1', '1');
+
+                    }
+                    function dtyzmResponse(result) {
+                        if (result.error == 1) {
+                            document.getElementById('dtyzmts').innerHTML = result.message;
+                        } else {
+                            document.getElementById('dtyzmts').innerHTML = '';
+                            time_out(60);
+                            tel = result.tel;
+                            captcha = result.captcha;
+                            Ajax.call('teldtyzm_ajax.php?act=yzmsend', 'tel=' + tel + '&captcha=' + captcha, yzmsendResponse, 'POST', 'JSON', '1', '1');
+                        }
+                    }
+                    function yzmsendResponse(result) {
+                        if (result.error == 0) {
+                            document.getElementById('dtyzmts').innerHTML = result.message;
+                        }
+                    }
+                    function time_out(times) {
+                        var time = times;
+                        if (time > 1) {
+                            time--;
+                            document.getElementById('tel_dtyzmx').innerHTML = time + "秒后重新获取";
+                            window.setTimeout(function () { time_out(time) }, 1000);
+                        }
+                        else {
+                            document.getElementById('tel_dtyzmx').innerHTML = "<a href='javascript:' onClick='tel_dtyzm()'>重新获取</a>";
+                        }
+                    }
+                </script>
+                <div class="login_but"><input type="hidden" name="act" value="tel_login"><input type="hidden"
+                        name="back_act" value="https://www.guojimami.com/category-56-b0.html"><input type="hidden"
+                        name="u_source" value="PC"><input type="submit" name="submit" value="登录"
+                        class="login_subm"><span></span></div>
+                <div class="clear"></div>
+                <div class="hezuo_tit">合作帐号登录</div>
+                <div class="hezuo">
+                    <a href="user.php?act=oath&amp;type=qq&amp;source=PC"><img
+                            src="themes/mbts1/images/login_icon_hz_qq.png" alt="QQ"></a>
+                    <a href="javascript:void(0)" onclick="show_login()"><img
+                            src="themes/mbts1/images/login_icon_hz_wx.png" alt="微信"></a>
+                    <div id="wx_wait" onclick="hide_show()"
+                        style="width: 100%; height: 100%; opacity: 0.8; position: fixed; top: 0px; left: 0px; z-index: 7999; background-color: rgb(255, 255, 255); display: block; background-position: initial initial; background-repeat: initial initial;display:none;">
+                    </div>
+                    <div id="wx_qrcode">
+                        <div id="wechat_login"><iframe
+                                src="https://open.weixin.qq.com/connect/qrconnect?appid=wx21f3df1c3c112a1c&amp;scope=snsapi_login&amp;redirect_uri=http://www.guojimami.com/wxuser.php&amp;state=we131231&amp;login_type=jssdk&amp;self_redirect=default&amp;styletype=&amp;sizetype=&amp;bgcolor=&amp;rst=&amp;style=black"
+                                frameborder="0" scrolling="no" width="300px" height="400px"></iframe></div>
+                    </div>
+                    <!--<a href="user.php?act=oath&type=alipay&source=PC"><img src="themes/mbts1/images/lglogin_3_alipay_login.png" alt="支付宝" />支付宝</a>-->
+                </div>
+                <div class="agreess">
+                    <input name="agreement" type="checkbox" value="1" checked="checked" class="agree">
+                    <div class="agrees">我已阅读并接受<a href="/article.php?id=6" target="_blank">《使用条款》</a></div>
+                    <div class="clear"></div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</div>
