@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../font/font_1459857_1jqup1ysncw/iconfont.css">
     <link rel="stylesheet" href="../css/nav-bottom.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/jquery-3.4.1.js"></script>
-    <script src="../js/login.js"></script>
 
+    <link rel="stylesheet" href="../css/pars.css">
+    <script src="../js/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -25,7 +24,7 @@
                 <p class="tex1">扫码下载国际妈咪APP<br>抢限量新人优惠礼包</p>
             </div>
         </div>
-        <div class="head-shopcart"><a href="" target="_blank">
+        <div class="head-shopcart"><a href="flow.php" target="_blank">
                 <div class="btn btn_bd btn-gwc">
                     <div class="btn_font">购物袋</div><span id="cart_info_numbers">0</span>
                 </div>
@@ -82,109 +81,188 @@
     </div>
     <!-- 头部导航结束 -->
 
-    <!-- 登录 -->
-    <div id="app">
-        <div id="login">
-            <div class="header">
-                <div class="main-content clearfix">
-                    <a class="logo fl"><img src="../img/top_icon_gjmm_logo.png" alt="logo"></a>
-                    <div class="register-link fr"><span>还没有账号？</span> <a
-                            href="http://127.0.0.1/code/gjmm/src/client/html/register.html"
-                            class="button register">立即注册</a>
+    <div class="gjmm_common_title">
+        <div class="tit_chi"><span>商品</span>详细信息</div>
+        <div class="tit_eng">Product details</div>
+    </div>
+
+    <div id="goodss">
+        <div class="goodss_js">
+            <div class="goodss_js_left">
+                <div class="wraps">
+                    <a href="" id="rollUp" class="rollMenu">
+                        <img src="https://www.guojimami.com/themes/mbts1/images/galleryup.png" alt="">
+                    </a>
+                    <a href="" id="rollDown" class="rollMenu">
+                        <img src="https://www.guojimami.com/themes/mbts1/images/gallerydown.png" alt="">
+                    </a>
+                    <div id="rollBox">
+                        <ul id="rollList">
+                            <li><a><img class="zoom-tiny-image"
+                                        src="https://www.guojimami.com/images/201811/thumb_img/994_thumb_P_1542218047557.jpg"></a>
+                            </li>
+                            <li><a><img class="zoom-tiny-image"
+                                        src="https://www.guojimami.com/images/201811/thumb_img/994_thumb_P_1542218047700.jpg"></a>
+                            </li>
+                            <li><a><img class="zoom-tiny-image"
+                                        src="https://www.guojimami.com/images/201811/thumb_img/994_thumb_P_1542218048935.jpg"></a>
+                            </li>
+                            <li><a><img class="zoom-tiny-image"
+                                        src="https://www.guojimami.com/images/201811/thumb_img/994_thumb_P_1542218049129.jpg"></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="article">
-                <div class="main-content clearfix">
-                    <a class="aside fl"><img src="" alt="" style="margin-top:35px;"></a>
-                    <div class="login-form fr">
-                        <!---->
-                        <div class="tab-login">
-                            <div class="tab-login-item active">手机号快捷登录</div>
-                            <div class="tab-login-item ">账号密码登录</div>
-                        </div>
-                        <div class="login-main-content">
-                            <div class="SmsValid loginView  loginViewCurrent">
-                                <div class="form-item phone"><span class="label">手机号码</span>
-                                    <div class="content"><input type="text" maxlength="11" name="phoneNum"
-                                            placeholder="请输入您的手机号" value="">
-                                        <span class="form-group__message">手机号码不能为空</span>
-                                    </div>
-                                </div>
-                                <div class="form-item image-code"><span class="label">验证码</span>
-                                    <div class="content"><input type="text" maxlength="6" placeholder="请输入验证码">
-                                        <div class="image-code-box">
-                                            <canvas width="160" height="45" id="captcha"></canvas>
-                                        </div>
-                                        <div class="form-group__message">请输入图形验证码</div>
-                                    </div>
-                                </div>
-                                <div class="form-item phone-code"><span class="label">短信验证码</span>
-                                    <div class="content">
-                                        <div class="phone-code-content"><input type="text" maxlength="6"
-                                                placeholder="请输入短信验证码" value="">
-                                            <span class="button code-sms">获取短信验证码</span> <span class="button code-sms"
-                                                style="display:none;">重试0</span></div>
-                                        <div class="form-group__message">短信验证码不能为空</div>
-                                    </div>
-                                </div>
-                                <div class="mask modal" style="display:none;" data-v-89a55570="" data-v-5b324de8="">
-                                    <div class="alert-message section" data-v-89a55570="" data-v-5b324de8="">
-                                        <div class="header clearfix" data-v-89a55570="" data-v-5b324de8=""><span
-                                                class="fl" data-v-89a55570="" data-v-5b324de8="">提示</span> <i class="fr"
-                                                data-v-89a55570="" data-v-5b324de8=""></i></div>
-                                        <div class="article" data-v-89a55570="" data-v-5b324de8="">
-                                            <span class="alert-content" data-v-89a55570="">
-                                                <h3 data-v-89a55570="">该手机号已被注册</h3>
-                                                <p data-v-89a55570="">你可以选择：</p>
-                                                <p data-v-89a55570="">1.将该手机号账户与当前账号关联，关联成功后：</p>
-                                                <p data-v-89a55570="">·您可以将原有账号订单信息、优惠券、红包、积分等合并叠加优惠更多；</p>
-                                                <p data-v-89a55570="">·您可以将原有的个人信息、收货地址合并，免于重新填写。</p>
-                                                <p data-v-89a55570="">2.您可以绑定一个新的手机号</p>
-                                            </span>
-                                        </div>
-                                        <div class="footer" data-v-89a55570="" data-v-5b324de8="">
-                                            <div class="btn ok" data-v-89a55570="" data-v-5b324de8="">绑定新手机号</div>
-                                            <div class="btn cancel" data-v-89a55570="" data-v-5b324de8="">关联</div>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="goodss_js_middle">
+                <div class="goodspic">
+                    <div><a href="">
+                            <img src="https://www.guojimami.com/images/201811/thumb_img/994_thumb_P_1542218047557.jpg"
+                                alt=""></a></div>
+                </div>
+                <div class="pingjia">
+                    <img src="https://www.guojimami.com/data/photos_txt/10.jpg" alt="">
+                    <img src="https://www.guojimami.com/data/photos_txt/05.jpg" alt="">
+                    <img src="https://www.guojimami.com/data/autophoto/TX719.jpg" alt="">
+                    <a href="#ppjj">已有<font id="ECS_GOODS_PL"></font>条口碑</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="goodss_js_right">
+                <div id="textinfo">
+                    <div class="names">
+                        <h1 class="name">Aptamil 德国爱他美奶粉1周岁以上 海外本土原版（8件优惠套餐）</h1>
+                        <div class="fbt_zx">套餐更优惠 免税仓极速发货 新鲜安全直达</div>
+                    </div>
+
+                    <div class="jiage">
+                        <span class="shp">￥121.00</span>
+                        <div class="hdj_tb">活动价</div>
+                        <del class="mkp mkpp">￥160.80</del>
+                    </div>
+
+                    <div class="flash item_box"><span class="t_l">年终钜惠狂欢续</span><span id="leftTime994" class="djs">
+                            <font style="font-weight:bold;">1</font>天<font style="font-weight:bold;">7</font>小时<font
+                                style="font-weight:bold;">16</font>分后恢复MOMMY价格￥134.00
+                        </span>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="manjian item_box" id="tax_show_btn"><span class="lbox">税费</span>
+                        <span class="rbox">综合税预计￥88.08</span><code>&gt;</code>
+                    </div>
+
+                    <div class="tcxz_box">
+                        <div class="swiper-wrapper">
+                            <div class="tcxzss">
+                                <p>￥143.00 / 件</p>
+                                <span>1件装</span>
                             </div>
-                            <div class="login-pwd loginView">
-                                <div class="form-item phone">
-                                    <div class="content"><input id="username-ID" type="text" maxlength="20"
-                                            name="loginName" placeholder="请输入用户名"> <span
-                                            class="form-group__message">用户名不能为空</span></div>
-                                </div>
-                                <div class="form-item phone">
-                                    <div class="content"><input id="password-ID" type="password" maxlength="20"
-                                            name="password" placeholder="请输入密码"> <span
-                                            class="form-group__message">密码不能为空</span></div>
-                                </div> <a class="forget-pwd-link">忘记密码？</a>
+                            <div class="tcxzss">
+                                <p>￥137.00 / 件</p>
+                                <span>2件装</span>
                             </div>
-                            <!---->
-                            <div class="form-item"><button class="logon button" id="loginBtn">立即登录</button></div>
-                            <div class="agree form-item"><input name="protocol" id="protocol" type="checkbox"
-                                    checked="checked"> <label for="protocol">我已阅读并同意</label>
-                                <a target="_blank">《使用条款》</a>
-                                <!---->
+                            <div class="tcxzss">
+                                <p>￥134.00 / 件</p>
+                                <span>3件装</span>
                             </div>
-                            <dl class="other-login">
-                                <dt class="other-login-title">你也可以使用以下账号登录</dt>
-                                <dd>
-                                    <a class="other-login-title-qq"><img src="../img/login_icon_hz_qq.png" alt=""></a>
-                                    <a class="other-login-title-wx"><img src="../img/login_icon_hz_wx.png" alt=""></a>
-                                </dd>
-                            </dl>
-                            <p class="service">如有账号问题，请咨询客服<a>400 6666 800</a></p>
+                            <div class="tcxzss">
+                                <p>￥131.00 / 件</p>
+                                <span>4件装</span>
+                            </div>
+                            <div class="tcxzss">
+                                <p>￥124.00 / 件</p>
+                                <span>6件装</span>
+                            </div>
+                            <div class="tcxzss">
+                                <p>￥121.00 / 件</p>
+                                <span>8件装</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="item_box">
+                        <div class="youji"><span class="tubiao">配发</span><span
+                                class="text">自由贸易区直达，满188免邮</span><code>&gt;</code></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="jw_sm">
+                        <p>境外发货说明：尊敬的用户您好，此商品为境外仓储发货，即使保税区发货也需经过通关环节，效率相对国内快递会略慢，请您根据您的实际情况计划好您的收货时间！</p>
+                    </div>
                 </div>
+            </div>
+
+        </div>
+        <div class="suxing">
+            <div>
+                <span>保质期：</span>
+                <span>540 天</span>
+            </div>
+            <div>
+                <span>产品名称：</span>
+                <span>Aptamil/德国爱他美</span>
+            </div>
+            <div>
+                <span>品牌：</span>
+                <span>Aptamil/爱他美</span>
+            </div>
+            <div>
+                <span>系列：</span>
+                <span>德国爱他美奶粉系列</span>
+            </div>
+            <div>
+                <span>净含量：</span>
+                <span>600g</span>
+            </div>
+            <div>
+                <span>产地：</span>
+                <span>Poland/波兰</span>
+            </div>
+            <div>
+                <span>年龄：</span>
+                <span>1岁以上</span>
+            </div>
+            <div>
+                <span>阶段：</span>
+                <span>4段</span>
+            </div>
+            <div>
+                <span>类型：</span>
+                <span>标准配方</span>
+            </div>
+            <div>
+                <span>配发：</span>
+                <span>自贸仓直发</span>
             </div>
         </div>
     </div>
 
+    <!-- 加入购物袋 -->
+    <div class="go_buys_fixed">
+        <div class="go_b">
+            <div class="share_p">
+                <p><img src="https://www.guojimami.com/themes/mbts1/images/goods_icon_share.png" alt="sc"></p>
+                <p> 分享</p>
 
+            </div>
+            <div class="buy_p">
+                <a class="fittings_g">立即订购</a>
+                <a class="addtopi">拼箱</a>
+            </div>
+            <div class="collect_p"><a>
+                    <p><img src="https://www.guojimami.com/themes/mbts1/images/goods_icon_collect.png" alt="sc"></p>
+                    <p> 收藏</p>
+                </a></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    </form>
+    <div class="clear"></div>
+    </div>
+    </div>
+    <div style="clear:both;"></div>
+    </div>
+    </div>
     <!-- 底部 -->
     <div class="nfoot clear_fix">
         <div class="nhelpstex clear_fix">

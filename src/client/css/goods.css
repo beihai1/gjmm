@@ -177,7 +177,8 @@
     left: -150px;
     top: 35px;
     z-index: 1;
-    background: url() 0 0 no-repeat;
+    background: #fff;
+    border: 1px solid #969696;
     line-height: 33px;
 }
 #fillter .choosethree .choose_r {
@@ -266,3 +267,153 @@
     background: url(../img/pages_icon_right.png) 0 5px no-repeat;
     background-size: 26px auto;
 }
+/* ///////////////////// */
+#goods_list_cat .ct {
+    width: 1224px;
+    position: relative;
+}
+ 
+
+#goods_list_cat .gjm{
+    width: 280px;
+    height: 410px;
+    margin: 20px 24px 0 0;
+    padding-top: 15px;
+    border: 1px solid #EBEBEB;
+    display: inline;
+    float: left;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+
+.gjm .tc_ja {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -135px;
+
+}
+.gjm .tc_ja img {
+    width: 100px;
+    height: 100px;
+    border: none;
+   
+}
+#goods_list_cat .gjm .gia {
+    margin-bottom: 10px;
+}
+#goods_list_cat .gjm .gia img {
+    width: 250px;
+    height: 250px;
+    padding: 0px 15px 10px;
+}
+#goods_list_cat .gjm .qhq {
+    text-align: center;
+    color: #ff2837;
+    padding-bottom: 10px;
+}
+#goods_list_cat .gjm .gan {
+    text-align: left;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 20px;
+    overflow: hidden;
+    display: block;
+    
+}
+#goods_list_cat .gjm .gan a {
+    color: #333;
+    text-decoration: none;
+}
+
+#goods_list_cat .gjm .hdgy {
+    height: 24px;
+    padding: 0px 10px;
+    margin-top: 10px;
+}
+#goods_list_cat .gjm .hdgy .xst {
+    height: 24px;
+    line-height: 24px;
+    padding: 0px 10px;
+    background-color: #ff2837;
+    color: #fff;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    margin-left: 10px;
+    float: left;
+}
+
+#goods_list_cat .ct .gjm .hdgy .lzyf {
+    height: 24px;
+    line-height: 24px;
+    padding: 0px 10px;
+    background-color: #50c3d7;
+    color: #fff;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    margin-left: 10px;
+    float: left;
+}
+.clear {
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0px;
+}
+#goods_list_cat .gjm .jiage {
+    width: 260px;
+    height: 20px;
+    margin: 15px 10px;
+}
+#goods_list_cat .gjm .jiage .gap {
+    font-size: 14px;
+    color: #969696;
+}
+#goods_list_cat .gjm .jiage .gap .shop_prices {
+    font-size: 18px;
+    font-family: arial;
+    color: #E21735;
+    float: left;
+    padding-left: 5px;
+}
+
+.page {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 14px;
+    float: right;
+  }
+  
+  .page a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0px 0px;
+    /* background-color: #fff0f0; */
+    border: solid 1px #ebebeb;
+    margin: 0px 2px;
+    /* color: #ff2837; */
+    font-size: 14px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+.page .active {
+    background-color: #fff0f0;
+    border: solid 1px #ff2837;
+    color: #ff2837;
+
+  }
+  .page a:hover {
+    color: #ff2837;
+  }
+  
+  
