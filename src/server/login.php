@@ -19,8 +19,10 @@ if(mysqli_num_rows($result) == 0)
   # (2-2) 如果用户名存在，接着检查密码
   $sql2 = "SELECT * FROM user WHERE username='$username'";
   $res = mysqli_query($db,$sql2);
-  $res = mysqli_fetch_all($res, MYSQLI_ASSOC)[0]["password"];
-  if($password !=  $res)
+
+  $res = mysqli_fetch_all($res,MYSQLI_ASSOC)[0];
+  $pwd = $res["password"];
+  if($password !=  $pwd)
   {
     # (2-2-1) 密码不正确，那么就返回数据(登录失败，密码错误)
     $data["status"] = "error";
@@ -28,8 +30,10 @@ if(mysqli_num_rows($result) == 0)
   }else
   {
     # (2-2-2) 密码正确，那么就返回数据(登录成功)
+    $userId = $res["id"];
     $data["status"] = "success";
     $data["data"]["msg"] = "恭喜你，登录成功";
+
   }
 }
 

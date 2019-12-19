@@ -1,15 +1,14 @@
 $(() => {
 
-    $(".tab-login-item").click(function () {
 
-        $(this).addClass("active").siblings().removeClass("active");
-        $(".loginView").eq($(this).index()).addClass("loginViewCurrent").siblings().removeClass("loginViewCurrent");
-    });
 
     $("#loginBtn").click(function () {
 
-        var username = $("#username-ID").val();
-        var password = $("#password-ID").val();
+
+
+        let username = $("#username-ID").val();
+        let password = $("#password-ID").val();
+
 
         $.ajax({
             type: "post",
@@ -19,6 +18,7 @@ $(() => {
             success: function (response) {
 
                 if (response.status == "success") {
+
                     window.location.href = "http://127.0.0.1/code/gjmm/src/client/html/shouye.html";
                 } else {
                     alert(response.data.msg)
@@ -26,5 +26,12 @@ $(() => {
             }
         });
     })
+
+    $(".tab-login-item").click(function () {
+
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".loginView").eq($(this).index()).addClass("loginViewCurrent").siblings().removeClass("loginViewCurrent");
+    });
+
 })
 

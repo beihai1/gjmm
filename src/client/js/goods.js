@@ -107,4 +107,23 @@ $(() => {
         $(this).addClass("current").siblings().removeClass("current");
     })
 
+    $(".ct").on("click", ".gjm", function () {
+        let item = $(this).index() + 1
+        // $.ajax({
+        //     type: "get",
+        //     url: "http://127.0.0.1/code/gjmm/src/server/pars.php",
+        //     dataType: "json",
+        //     success: function (data) {
+        // 
+
+        //         // window.location.href = "http://127.0.0.1/code/gjmm/src/client/html/pars.html";
+
+        //     }
+        // });
+        // // let queryString = `src=${o.src}&title=${o.title}&price=${o.price}&priceA=${o.priceA}`;
+        let queryString = `id=${item}`;
+        window.location.href = "http://127.0.0.1/code/gjmm/src/client/html/pars.html?" + queryString;
+
+    })
+
 })

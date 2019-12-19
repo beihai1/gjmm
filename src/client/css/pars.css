@@ -48,11 +48,11 @@
 }
 #rollUp {
     top: 0px;
-    left: 40px;
+    left: 46px;
 }
 #rollDown {
     bottom: 0px;
-    left: 40px;
+    left: 46px;
 }
 .rollMenu {
     position: absolute;
@@ -68,17 +68,22 @@
     height: 360px;
 
 }
-
+#goodss .goodss_js .goodss_js_left  li{
+   border: 1px solid #ebebeb; 
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin: 10px 0 0 10px;
+}
 
 #goodss .goodss_js .goodss_js_left  li .zoom-tiny-image {
     width: 78px;
     height: 78px;
     display: block;
-    border: 1px solid #ebebeb;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    margin: 10px 0 0 20px;
+    margin: 5px 0 0 10px;
+}
+#goodss .goodss_js .goodss_js_left .selected{
+    border: 1px solid #ff2837;
 }
 #goodss .goodss_js .goodss_js_middle {
     display: block;
@@ -93,8 +98,13 @@
     background-color: #ebebeb;
 }
 #goodss .goodss_js .goodss_js_middle .goodspic img {
-    display: block;
     width: 420px;
+}
+.activeimg{
+    display: block;
+}
+.activeimga{
+    display: none;
 }
 #goodss .goodss_js .goodss_js_middle .pingjia {
     width: 360px;
@@ -222,6 +232,84 @@
     float: left;
 }
 
+#textinfo .manjian .rbox .bonus_box {
+    display: block;
+    width: 61px;
+    height: 40px;
+    background: url(https://www.guojimami.com/themes/mbts1/images/goods_icon_bonusBg.png) left 9px no-repeat;
+    background-size: 61px auto;
+    margin: 0px 5px;
+    text-align: center;
+    color: #ff2837;
+    float: left;
+}
+
+.dialog_bj {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    _position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 999;
+}
+.manjian_list .title {
+    width: 94%;
+    margin: 0px 3%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: solid 1px #ebebeb;
+}
+.manjian_list .title span {
+    font-family: "PingFang SC Regular";
+    font-size: 14px;
+    color: #333;
+    float: left;
+}
+.manjian_list .title .img {
+    display: block;
+    width: 12px;
+    padding-top: 19px;
+    float: right;
+}
+.manjian_list .title .img img {
+    width: 12px;
+}
+.tax_list_con {
+    width: 94%;
+    margin: 0 3%;
+    padding: 10px 0px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333333;
+}
+.manjian_list {
+    width: 100%;
+    height: 500px;
+    position: fixed;
+    /* _position: absolute;
+    _left: 0;
+    _bottom: 0; */
+    left: 0px;
+    bottom: 0px;
+    background-color: #fff;
+    z-index: 10000;
+    display: none;
+}
+.tax_list_con font {
+    color: #969696;
+}
+.tax_list_con .sm {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.tax_list_con span {
+    color: #ff2837;
+}
 .tcxz_box {
     width: 560px;
     height: 77px;
@@ -247,6 +335,32 @@
     font-size: 12px;
     margin-right: 10px;
 }
+.tcxzs {
+    width: 114px;
+    height: 70px;
+    border: 1px solid #ff2837;
+    float: left;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+   
+}
+.tcxzs p {
+    width: 114px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0;
+    margin-top: 13px;
+    color: #ff2837;
+}
+.tcxzs span {
+    color: #ff2837;
+    line-height: 20px;
+    font-size: 10px;
+}
+
 .tcxzss p {
     width: 114px;
     height: 24px;
@@ -386,4 +500,18 @@
 .go_b .collect_p img {
     width: 20px;
     padding: 4px 0px;
+}
+ .addtocart {
+    display: block;
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0px 10%;
+    background-color: #ff2837;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    float: left;
 }
