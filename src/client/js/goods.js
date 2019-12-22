@@ -34,23 +34,7 @@ $(() => {
         $("#sxxl4_item").css("display", "none")
     })
 
-    // getDataWithPageCount(1);
 
-    /* 发送网络请求获取服务器商品数据 */
-    // function getDataWithPageCount(index) {
-    //     $.ajax({
-    //         type: "get",
-    //         url: "http://127.0.0.1/code/gjmm/src/server/getGoodData.php",
-    //         data: "page=" + index,
-    //         dataType: "json",
-    //         success: function (data) {
-    //             console.log(data);
-    //             renderUI(data);
-
-
-    //         }
-    //     });
-    // }
 
     function getDataWithPage(page, type) {
         $.ajax({
@@ -109,18 +93,7 @@ $(() => {
 
     $(".ct").on("click", ".gjm", function () {
         let item = $(this).index() + 1
-        // $.ajax({
-        //     type: "get",
-        //     url: "http://127.0.0.1/code/gjmm/src/server/pars.php",
-        //     dataType: "json",
-        //     success: function (data) {
-        // 
 
-        //         // window.location.href = "http://127.0.0.1/code/gjmm/src/client/html/pars.html";
-
-        //     }
-        // });
-        // // let queryString = `src=${o.src}&title=${o.title}&price=${o.price}&priceA=${o.priceA}`;
         let queryString = `id=${item}`;
         window.location.href = "http://127.0.0.1/code/gjmm/src/client/html/pars.html?" + queryString;
 

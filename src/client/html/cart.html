@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../font/font_1459857_1jqup1ysncw/iconfont.css">
+    <link rel="stylesheet" href="../css/nav-bottom.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/cart.js"></script>
+</head>
+
+<body>
+
+    <!-- 侧边导航 -->
+    <div id="izl_rmenu" class="izl-rmenu">
+        <div class="btn btn_bd1 btn-app">
+            <div class="btn_font">APP下载</div>
+            <div class="app btns" style="display: none;"><img src="" alt="APP">
+                <p class="tex1">扫码下载国际妈咪APP<br>抢限量新人优惠礼包</p>
+            </div>
+        </div>
+        <div class="head-shopcart"><a target="_blank">
+                <div class="btn btn_bd btn-gwc">
+                    <div class="btn_font">购物袋</div><span id="cart_info_numbers">0</span>
+                </div>
+            </a></div>
+        <div class="btn btn_bd btn-kf">
+            <div class="btn_font">联系客服</div>
+            <div class="kf btns" style="display: none;">
+                <p class="kf_te1">国际妈咪客服</p>
+                <p class="kf_te2">周一至周日8:30-21:00</p>
+                <p class="kf_te3">400-006-1777</p>
+                <p class="kf_te2">客服热线</p>
+                <p class="kf_te4" onclick="javascript:NTKF.im_openInPageChat();">在线客服</p>
+                <p class="kf_te2">非工作时间可留言</p>
+            </div>
+        </div>
+        <div class="btn btn_bd btn-weixin">
+            <div class="btn_font">微信商城</div>
+            <div class="weixin btns"><img src="" alt="APP">
+                <p class="tex1">微信小程序<br>微信扫码访问国际妈咪</p>
+            </div>
+        </div>
+        <div class="btn btn_bd2 btn-top">
+            <div class="btn_font">回到顶部</div>
+            <div class="top"></div>
+        </div>
+    </div>
+    <!-- 侧边导航结束 -->
+
+    <!-- 头部导航开始 -->
+    <div class="gjmm_headers">
+        <div class="gjmm_header clear_fix">
+            <div class="logo"><img src="../img/top_icon_gjmm_logo.png" alt=""></div>
+            <div class="gjmm_nav">
+                <ul>
+                    <li><a href="../html/shouye.html">首页</a></li>
+                    <li><a href="../html/datails.html">找商品</a></li>
+                    <li><a href="">MOMMY圈</a></li>
+                    <li><a href="">关于我们</a></li>
+                    <li><a href="">招商合作</a></li>
+                </ul>
+            </div>
+            <div class="gjmm_search">
+                <div id="keyword_in">
+                    <input type="text" class="keybg1">
+                    <a href=""><i class="iconfont icon--"></i></a>
+                </div>
+            </div>
+            <div class="gjmm_nav_right">
+                <a href="" class="iconfont icon-Group- user_icon"></a>
+                <a href="" class="iconfont icon-xiaoxi"></a>
+                <a href="http://127.0.0.1/code/gjmm/src/client/html/register.html" class="iconfont icon-account"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 头部导航结束 -->
+
+    <!-- 购物车 -->
+    <div class="main" id="pflow">
+
+        <div class="gjmm_common_title">
+            <div class="tit_chi"><span>购物袋</span>安全结算</div>
+            <div class="tit_eng">Security settlement</div>
+        </div>
+
+        <!--  <script type="text/javascript" src="themes/mbts1/js/ycxf_xiaoeng.js"></script> -->
+
+        <!-- <div id="top">
+            <div id="izl_rmenu" class="izl-rmenu">
+                <div class="btn btn_bd1 btn-app">
+                    <div class="btn_font">APP下载</div>
+                    <div class="app btns"><img src="./themes/mbts1/images/app_download_ewm.png" alt="APP">
+                        <p class="tex1">扫码下载国际妈咪APP<br>抢限量新人优惠礼包</p>
+                    </div>
+                </div>
+                <div class="head-shopcart"><a href="flow.php" target="_blank">
+                        <div class="btn btn_bd btn-gwc">
+                            <div class="btn_font">购物袋</div><span id="cart_info_numbers">0</span>
+                        </div>
+                    </a></div>
+                <div class="btn btn_bd btn-kf">
+                    <div class="btn_font">联系客服</div>
+                    <div class="kf btns">
+                        <p class="kf_te1">国际妈咪客服</p>
+                        <p class="kf_te2">周一至周日8:30-21:00</p>
+                        <p class="kf_te3">400-006-1777</p>
+                        <p class="kf_te2">客服热线</p>
+                        <p class="kf_te4" onclick="javascript:NTKF.im_openInPageChat();">在线客服</p>
+                        <p class="kf_te2">非工作时间可留言</p>
+                    </div>
+                </div>
+                <div class="btn btn_bd btn-weixin">
+                    <div class="btn_font">微信商城</div>
+                    <div class="weixin btns"><img src="./themes/mbts1/images/weixin_applets_ma.jpg" alt="APP">
+                        <p class="tex1">微信小程序<br>微信扫码访问国际妈咪</p>
+                    </div>
+                </div>
+                <div class="btn btn_bd2 btn-top">
+                    <div class="btn_font">回到顶部</div>
+                    <div class="top"></div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- <script>
+                jQuery(document).ready(function ($) {
+                    function xiaoneng() {
+                        Ajax.call('xiaoneng_ajax.php', 'act=cart', xiaonengactResponse, 'GET', 'JSON', '0', '1');
+                    }
+                    function xiaonengactResponse(result) {
+                        NTKF_PARAM = result;
+                        if (NTKF_PARAM) {
+                            var nt_script = document.createElement("script");
+                            nt_script.setAttribute("src", "https://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9768");
+                            nt_script.onload = function () {
+                                //console.log('Success...');
+                            }
+                            document.body.appendChild(nt_script);
+                        }
+                    }
+                    xiaoneng();
+                });
+    
+            </script> -->
+
+
+        <!-- <script type="text/javascript" src="js/showdiv.js"></script>
+            <script type="text/javascript">
+                var user_name_empty = "请输入您的用户名！";
+                var email_address_empty = "请输入您的电子邮件地址！";
+                var email_address_error = "您输入的电子邮件地址格式不正确！";
+                var new_password_empty = "请输入您的新密码！";
+                var confirm_password_empty = "请输入您的确认密码！";
+                var both_password_error = "您两次输入的密码不一致！";
+                var show_div_text = "请点击更新购物袋按钮";
+                var show_div_exit = "关闭";
+            </script> -->
+
+        <!--
+         <div class="flow_gwc_psjd"><a href="article-1311.html" target="_blank"><span class="q">?</span><span class="t">新用户查看<b>&nbsp;自贸仓/香港仓/海外仓&nbsp;</b>直发模式解读<code>&nbsp;&gt;</code></span></a>
+          <div class="clear"></div>
+         </div>-->
+
+        <!--<div class="flow_nosmrz"><font style="color:#ff2837;">温馨提示：海关新政，为保证跨境购物顺利清关，实名认证姓名、身份证必须与付款人(支付宝、微信账号实名认证信息)一致！</font><a href="user.php?act=id_verify">实名认证 >></a></div>-->
+        <div class="ct" style="padding-top:20px;">
+            <div class="bgw p1-0">
+                <div id="FLOW_CART_GOODS">
+                    <form id="formCart" name="formCart" method="post" action="flow.php">
+                        <div class="cartGoodsTitle">
+
+                            <div class="choose" style="width:40px;">
+                                <input type="checkbox" name="select_goods">&nbsp;
+                            </div>
+                            <div class="goods" style="width:38%;">商品</div>
+
+                            <div class="left" style="width:12%;">单价</div>
+                            <div class="left" style="width:10%;">数量</div>
+                            <div class="left" style="width:8%;">商品小计</div>
+                            <div class="left" style="width:7%;">操作</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="cart_no_goods">购物袋中还没有商品哦<a
+                                href="http://127.0.0.1/code/gjmm/src/client/html/goods.html">去选购吧</a></div>
+
+
+
+                        <div class="cart_one">
+                            <div class="cart_onetop">
+                                <input type="checkbox" name="select_goods">
+                                <span style="padding-right:20px;"></span>
+                                <span class="m_tex">商品总计（不含运费）: </span><span id="cart_amount_desc">
+                                    <font>￥0.00</font>
+                                </span><span class="m_tex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品税费: </span><span
+                                    id="cart_tax_desc">
+                                    <font></font>
+                                </span>
+                                <span id="discount"></span> </div>
+                            <div class="cart_onebottom">
+                                <div class="left"><input type="hidden" name="act" value="fcaca_cart">
+                                    <a href="javascript:;" class="not_active_button_c9696">
+                                        <font color="#fff">立即结算</font>
+                                    </a>
+                                </div>
+                                <div class="right"></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+
+                <!-- <script type="text/javascript" charset="utf-8">
+                        function add_num(rec_id, goods_id, goods_gc, activity_id) {
+                            var numy = document.getElementById("goods_number_" + rec_id + "").value;
+                            var numj = goods_gc;
+    
+                            var rednum_img = document.getElementById("rednum_img_" + rec_id).getAttribute("src");
+                            var img_arr = rednum_img.split("/");
+                            //alert(img_arr[4]);
+                            if (img_arr[4] == "flow_icon_p-h.png") {
+                                document.getElementById("rednum_img_" + rec_id).setAttribute("src", "./themes/mbts1/images/flow_icon_p-.png");
+                            }
+    
+                            var nums = numy * 1 + numj * 1;
+                            var number = nums;
+                            document.getElementById("goods_number_" + rec_id + "").value = number;
+                            Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id + '&number=' + number + '&goods_id=' + goods_id + '&activity_id=' + activity_id, changePriceResponse, 'GET', 'JSON');
+                        }
+    
+                        function red_num(rec_id, goods_id, goods_gc, activity_id) {
+                            var numy = document.getElementById("goods_number_" + rec_id + "").value;
+                            var numj = goods_gc;
+    
+                            var addnum_img = document.getElementById("addnum_img_" + rec_id).getAttribute("src");
+                            var img_arr = addnum_img.split("/");
+                            //alert(img_arr[4]);
+                            if (img_arr[4] == "flow_icon_addh.png") {
+                                document.getElementById("addnum_img_" + rec_id).setAttribute("src", "./themes/mbts1/images/flow_icon_add.png");
+                            }
+    
+                            if (numy > goods_gc) {
+                                var nums = numy * 1 - numj * 1;
+                                var number = nums;
+                            }
+                            else {
+                                var number = goods_gc;
+                                alert('商品数量最少为' + goods_gc);
+                                document.getElementById("rednum_img_" + rec_id).setAttribute("src", "./themes/mbts1/images/flow_icon_p-h.png");
+                            }
+                            document.getElementById("goods_number_" + rec_id + "").value = number;
+                            Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id + '&number=' + number + '&goods_id=' + goods_id + '&activity_id=' + activity_id, changePriceResponse, 'GET', 'JSON');
+                        }
+    
+                        function change_price(rec_id, goods_id, activity_id) {
+    
+                            var number = document.getElementById("goods_number_" + rec_id + "").value;
+                            //alert(number);
+                            Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id + '&number=' + number + '&goods_id=' + goods_id + '&activity_id=' + activity_id, changePriceResponse, 'GET', 'JSON');
+                        }
+    
+                        function changePriceResponse(result) {
+                            if (result.error == 1) {
+    
+                                alert(result.content);
+                                document.getElementById("goods_number_" + result.rec_id + "").value = result.number;
+                            }
+                            else {
+                                document.getElementById('discount').innerHTML = result.your_discount;
+                                document.getElementById('subtotal_' + result.rec_id).innerHTML = result.subtotal;//商品总价
+                                document.getElementById('subtax_' + result.rec_id).innerHTML = "<span>" + result.subtax + "</span>";//代缴税费总价
+                                document.getElementById('cart_amount_desc').innerHTML = result.cart_amount_desc;//购物袋商品总价说明
+                                document.getElementById('cart_tax_desc').innerHTML = result.cart_tax_desc;//购物袋商品税费总价说明
+                                if (document.getElementById('market_amount_desc')) {
+                                    document.getElementById('market_amount_desc').innerHTML = result.market_amount_desc;//购物袋商品总市价说明
+                                }
+                                if (document.getElementById("manjian_desc_" + result.activity_id)) {
+                                    document.getElementById("manjian_desc_" + result.activity_id).innerHTML = result.manjian_amount_desc;
+                                }
+    
+                            }
+    
+                        }
+                        function goto(url, dalay) {
+                            setTimeout("window.location='" + url + "'", dalay);
+                        }
+    
+                    </script>
+        
+        
+                    <script language="javascript">
+                        function showPic() {
+                            document.getElementById("lphts").style.display = "block";
+                        }
+                        function hiddenPic() {
+                            document.getElementById("lphts").style.display = "none";
+                        }
+                        /*显示礼品盒商品*/
+                        function lph_select() {
+                            document.getElementById('ECS_LP_GOODS').style.display = '';
+                            Ajax.call("flow.php?step=show_lph", '', show_lphResponse, "GET", "JSON");
+                        }
+                        function show_lphResponse(result) {
+                            var LP_GOODS = document.getElementById('ECS_LP_GOODS');
+                            LP_GOODS.innerHTML = result.lp_goods;
+                        }
+                        function lp_choose(lpid) {
+                            Ajax.call('flow.php', 'step=lp_choose&lpid=' + lpid, lp_chooseResponse, 'GET', 'JSON');
+                        }
+                        function lp_chooseResponse(result) {
+    
+                        }
+                        function lph_close() {
+                            Ajax.call('flow.php?step=lp_clear', '', lp_chooseResponse, 'GET', 'JSON');
+                            document.getElementById('ECS_LP_GOODS').style.display = 'none';
+                        }
+                    </script>
+        
+                    <script type="text/javascript">
+                        //购物袋商品
+                        function flow_cart_goods() {
+                            Ajax.call('flow.php', 'step=show_cart_goods', flowCartGoodsResponse, 'GET', 'JSON', '1', '1');
+                        }
+                        function flowCartGoodsResponse(result) {
+                            var FLOW_CART_GOODS = document.getElementById("FLOW_CART_GOODS");
+                            FLOW_CART_GOODS.innerHTML = result.flow_cart_goods;
+    
+                            /*底部foot位置*/
+                            var foots_otop2 = $("#page_foots").offset().top;
+                            var foots_height2 = $('#page_foots').outerHeight(true);
+                            var foots_pos2 = foots_otop2 + foots_height;
+                            var visiHeight2 = window.innerHeight;
+                            if (foots_pos2 <= visiHeight2) {
+                                $('#page_foot').addClass("page_footers_pos"); //固定位置到底部
+                            }
+                            else {
+                                $('#page_foot').removeClass("page_footers_pos");
+                            }
+                        }
+                        flow_cart_goods();
+    
+                        /*选择购物袋商品*/
+                        function select_cart_goods(rec_id) {
+                            Ajax.call("flow.php?step=update_cart_selected", "rec_id=" + rec_id, selectCartGoodsResponse, "GET", "JSON");
+                        }
+                        function selectCartGoodsResponse(result) {
+    
+                            if (result.error == 1) {
+                                alert(result.content);
+                            }
+                            else {
+                                var FLOW_CART_GOODS = document.getElementById("FLOW_CART_GOODS");
+                                FLOW_CART_GOODS.innerHTML = result.flow_cart_goods;
+                            }
+                        }
+    
+                        function select_cart_goodsall(all) {
+                            Ajax.call("flow.php?step=update_cart_selected", "all=" + all, selectCartGoodsallResponse, "GET", "JSON");
+                        }
+                        function selectCartGoodsallResponse(result) {
+                            if (result.error == 1) {
+                                alert(result.content);
+                            }
+                            else {
+                                var FLOW_CART_GOODS = document.getElementById("FLOW_CART_GOODS");
+                                FLOW_CART_GOODS.innerHTML = result.flow_cart_goods;
+                            }
+                        }
+                    </script>
+         -->
+
+            </div>
+            <div class="bt"><span></span></div>
+        </div>
+
+
+        <!-- <script type="text/javascript" charset="gbk">
+                function fittings_to_flow(goodsId, parentId) {
+                    var goods = new Object();
+                    var spec_arr = new Array();
+                    var number = 1;
+                    goods.spec = spec_arr;
+                    goods.goods_id = goodsId;
+                    goods.number = number;
+                    goods.parent = parentId;
+                    Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), fittings_to_flow_response, 'POST', 'JSON');
+                }
+                function fittings_to_flow_response(result) {
+                    if (result.error > 0) {
+                        // 如果需要缺货登记，跳转
+                        if (result.error == 2) {
+                            if (confirm(result.message)) {
+                                location.href = 'user.php?act=add_booking&id=' + result.goods_id;
+                            }
+                        }
+                        else if (result.error == 6) {
+                            openSpeDiv(result.message, result.goods_id, result.parent);
+                        }
+                        else {
+                            alert(result.message);
+                        }
+                    }
+                    else {
+                        location.href = 'flow.php';
+                    }
+                }
+            </script>
+        
+        
+        
+        
+        
+        
+            <script type="text/javascript" src="themes/mbts1/js/table.js"></script> -->
+
+
+
+
+
+
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="foot_links clear_fix">
+        <div class="foot_link clear_fix">
+            <ul>
+                <li><a href="">招商合作</a></li>
+                <span>-</span>
+                <li><a href="">加入我们</a></li>
+                <span>-</span>
+                <li><a href="">联系我们</a></li>
+                <span>-</span>
+                <li><a href="">友情链接</a></li>
+                <span>-</span>
+                <li><a href="">服务协议</a></li>
+                <span>-</span>
+                <li><a href="">交易规则</a></li>
+                <span>-</span>
+                <li><a href="">隐私政策</a></li>
+                <span>-</span>
+                <li><a href="">自营信息公示</a></li>
+
+            </ul>
+        </div>
+        <div class="foot_copy">
+            <div class="cp1">
+                <a href="" class="hubeian">
+                    <img src="../img/page_footer_hubeian_icon.png" alt="">
+                    <span>沪公网安备 31010402005375号</span>
+                </a>
+                <a href="" class="hubeian">
+                    <span>&nbsp;沪ICP备12049350号-2</span>
+                </a>
+                <a href="" class="hubeian">
+                    <span>&nbsp;增值电信业务经营许可证：沪B2-20180865</span>
+                </a>
+                <span>Copyright ©2019 Shanghai Verantwortung Information Technology Co.,Ltd.</span>
+            </div>
+            <p class="cp2">
+                <a href=""><img src="../img/foot_ico17.gif" alt=""></a>
+                <span class="cp3">
+                    <a href="">
+                        <img src="https://rr.knet.cn/static/images/newLogo/star4.png" alt="">
+                    </a>
+
+                </span>
+                <a href="" class="cp4"><img src="https://icon.cecdc.com/sf.png" alt=""></a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

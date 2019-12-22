@@ -1,81 +1,4 @@
-// var arr = [];
-// var c = document.querySelectorAll(".clearfix")[2].querySelectorAll("li");
-// var obj = {};
-// obj.srcq = c[0].querySelector("img").src;
-// obj.srcw = c[1].querySelector("img").src;
-// obj.srce = c[2].querySelector("img").src;
-// obj.srcr = c[3].querySelector("img").src;
 
-// var b = document.querySelector(".goodss_js_middle");
-
-// obj.srcD = b.querySelector(".cloud-zoom").querySelector("img").src;
-// obj.srcA = b.querySelector(".pingjia").querySelectorAll("img")[0].src
-// obj.srcB = b.querySelector(".pingjia").querySelectorAll("img")[1].src
-// obj.srcC = b.querySelector(".pingjia").querySelectorAll("img")[2].src
-// obj.koubei = b.querySelector(".pingjia").querySelector("a").innerText
-
-// var a = document.querySelector(".goodss_js_right");
-
-// obj.h1 = a.querySelector("h1").innerText;
-// obj.zx = a.querySelector(".fbt_zx").innerText;
-// obj.price = a.querySelector(".shp").innerText;
-// obj.hdj_tb = a.querySelector(".hdj_tb").innerText;
-// obj.mkpp = a.querySelector(".mkpp").innerText;
-
-// obj.t_l = a.querySelector(".t_l").innerText;
-// obj.djs = a.querySelector(".djs").innerText;
-
-// obj.bonus_boxA = a.querySelectorAll(".lbox")[0].innerText;
-// obj.bonus_boxB = a.querySelectorAll(".lbox")[1].innerText;
-// obj.bonus_boxC = a.querySelectorAll(".lbox")[2].innerText;
-// obj.bonus_boxD = a.querySelectorAll(".lbox")[3].innerText;
-// obj.bonus_boxE = a.querySelectorAll(".lbox")[4].innerText;
-// obj.bonus_boxF = a.querySelectorAll(".lbox")[5].innerText;
-// obj.lboxA = a.querySelector("#tax_show_btn").querySelector(".lbox").innerText;
-// obj.rbox = a.querySelector("#tax_show_btn").querySelector(".rbox").innerText;
-
-
-// obj.priceA = a.querySelectorAll(".tcxzss")[0].querySelector("p").innerText;
-// obj.shuA = a.querySelectorAll(".tcxzss")[0].querySelector("span").innerText;
-// obj.priceB = a.querySelectorAll(".tcxzss")[1].querySelector("p").innerText;
-// obj.shuB = a.querySelectorAll(".tcxzss")[1].querySelector("span").innerText;
-// obj.priceC = a.querySelectorAll(".tcxzss")[2].querySelector("p").innerText;
-// obj.shuC = a.querySelectorAll(".tcxzss")[2].querySelector("span").innerText;
-// obj.priceD = a.querySelectorAll(".tcxzss")[3].querySelector("p").innerText;
-// obj.shuD = a.querySelectorAll(".tcxzss")[3].querySelector("span").innerText;
-// obj.priceE = a.querySelectorAll(".tcxzss")[4].querySelector("p").innerText;
-// obj.shuE = a.querySelectorAll(".tcxzss")[4].querySelector("span").innerText;
-
-
-// obj.tubiao = a.querySelector(".tubiao").innerText;
-// obj.text = a.querySelector(".text").innerText;
-
-// obj.jw_sm = a.querySelector(".jw_sm").innerText;
-
-// var d = document.querySelector(".suxing");
-
-// obj.expA = d.querySelectorAll("div")[0].querySelectorAll("span")[0].innerText;
-// obj.dataA = d.querySelectorAll("div")[0].querySelectorAll("span")[1].innerText;
-// obj.expB = d.querySelectorAll("div")[1].querySelectorAll("span")[0].innerText;
-// obj.dataB = d.querySelectorAll("div")[1].querySelectorAll("span")[1].innerText;
-// obj.expC = d.querySelectorAll("div")[2].querySelectorAll("span")[0].innerText;
-// obj.dataC = d.querySelectorAll("div")[2].querySelectorAll("span")[1].innerText;
-// obj.expD = d.querySelectorAll("div")[3].querySelectorAll("span")[0].innerText;
-// obj.dataD = d.querySelectorAll("div")[3].querySelectorAll("span")[1].innerText;
-// obj.expE = d.querySelectorAll("div")[4].querySelectorAll("span")[0].innerText;
-// obj.dataE = d.querySelectorAll("div")[4].querySelectorAll("span")[1].innerText;
-// obj.expF = d.querySelectorAll("div")[5].querySelectorAll("span")[0].innerText;
-// obj.dataF = d.querySelectorAll("div")[5].querySelectorAll("span")[1].innerText;
-// obj.expG = d.querySelectorAll("div")[6].querySelectorAll("span")[0].innerText;
-// obj.dataG = d.querySelectorAll("div")[6].querySelectorAll("span")[1].innerText;
-// obj.expH = d.querySelectorAll("div")[7].querySelectorAll("span")[0].innerText;
-// obj.dataH = d.querySelectorAll("div")[7].querySelectorAll("span")[1].innerText;
-// obj.expI = d.querySelectorAll("div")[8] ? d.querySelectorAll("div")[8].querySelectorAll("span")[0].innerText : "";
-// obj.dataI = d.querySelectorAll("div")[8] ? d.querySelectorAll("div")[8].querySelectorAll("span")[1].innerText : "";
-// obj.expJ = d.querySelectorAll("div")[9] ? d.querySelectorAll("div")[9].querySelectorAll("span")[0].innerText : "";
-// obj.dataJ = d.querySelectorAll("div")[9] ? a.querySelectorAll("div")[9].querySelectorAll("span")[1].innerText : "";
-
-// arr.push(obj)
 
 
 $(() => {
@@ -88,19 +11,40 @@ $(() => {
             let manager = new Manager(data);
             manager.init();
 
-
         }
     });
 
 
-    // $.ajax({
-    //     type: "get",
-    //     url: "http://127.0.0.1/code/gjmm/src/server/pars.php",
-    //     dataType: "json",
-    //     success: function (data) {
+    let str = decodeURI(window.location.search.slice(1));
 
-    //     }
-    // });
+
+    var data = str.split("=");
+    var val = data[1];
+
+
+
+
+    $.ajax({
+        type: "get",
+        url: "http://127.0.0.1/code/gjmm/src/server/pars.php",
+        // data: "data",
+        dataType: "json",
+        success: function (data) {
+            let item = data[val - 1]
+
+            let oImg = document.getElementsByClassName("zoom-tiny-image")[0];
+
+            oImg.src = item.srcA;
+            let oImgu = document.getElementsByClassName("goodspic")[0].getElementsByTagName("img")[0];
+
+            oImgu.src = item.srcA
+            let oImgv = document.getElementsByClassName("max_box")[0].getElementsByClassName("imga")[0];
+            oImgv.src = item.srcA
+            $(".shp").text(item.priceA)
+            $(".name").text(item.title)
+        }
+    });
+
 
 
 
@@ -115,6 +59,7 @@ $(() => {
         init() {
             this.renderUI();
             this.AddClickEvent();
+            this.mouseenter();
         }
         renderUI() {
 
@@ -150,13 +95,16 @@ $(() => {
 
             let html2 = this.data.map((ele, index) => {
                 return `
+                 
                 <div class="goodspic">
-                    <div><a class="activeimg" href=""><img src="" alt=""></a>
-                         <a class="activeimga" href=""><img src=${ele.srcw} alt=""></a>
-                         <a class="activeimga" href=""><img src=${ele.srce} alt=""></a>
-                         <a class="activeimga" href=""><img src=${ele.srcr} alt=""></a>
-                    </div>            
+                    <div  class="min_box">
+                    <a class="activeimg" href=""><img src="" alt=""></a>
+                        
+                         <div class="zzhao"></div>
+                    </div>  
+                             
                 </div>
+               
                 <div class="pingjia">
                     <img src=${ele.srcA} alt="">
                     <img src=${ele.srcB} alt="">
@@ -164,8 +112,12 @@ $(() => {
                     <a href="#ppjj">${ele.koubei}</a>
                     <div class="clear"></div>
                 </div>
+                
             `
             })
+
+
+
             $(".goodss_js_middle").html(html2);
 
             let html3 = this.data.map((ele, index) => {
@@ -223,23 +175,23 @@ $(() => {
                     <div class="tcxz_box">
                         <div class="swiper-wrapper">
                             <div class="tcxzss">
-                                <p>￥${ele.priceA} / 件</p>
+                                <p>￥<span class="jq">${ele.priceA}</span> / 件</p>
                                 <span>${ele.shuA}</span>
                             </div>
                             <div class="tcxzss">
-                                <p>￥${ele.priceB} / 件</p>
+                                <p>￥<span class="jq">${ele.priceB}</span> / 件</p>
                                 <span>${ele.shuB}</span>
                             </div>
                             <div class="tcxzss">
-                                <p>￥${ele.priceC} / 件</p>
+                                <p>￥<span class="jq">${ele.priceC}</span> / 件</p>
                                 <span>${ele.shuC}</span>
                             </div>
                             <div class="tcxzss">
-                                <p>￥${ele.priceD} / 件</p>
+                                <p>￥<span class="jq">${ele.priceD}</span> / 件</p>
                                 <span>${ele.shuD}</span>
                             </div>
                             <div class="tcxzss">
-                                <p>￥${ele.priceE} / 件</p>
+                                <p>￥<span class="jq">${ele.priceE}</span> / 件</p>
                                 <span>${ele.shuE}</span>
                             </div>
                         </div>
@@ -302,20 +254,56 @@ $(() => {
 
             })
             $(".suxing").html(html4);
+
+
+            let html5 = this.data.map((ele, index) => {
+                return `<div id="buy">
+            <div class="img"><img src=${ele.srcq}
+                    alt=${ele.h1}></div>
+            <div class="p_n">
+                <p class="prices">${ele.price}</p>
+                <div class="close_btn"><img id="buy_num_close" src="https://www.guojimami.com/themes/mbts1/images/goods_icon_close.png"
+                        alt="close">
+                </div>
+                <div class="buy_num">
+                    <span class="s-p-l">
+                        <img style="CURSOR: pointer; vertical-align:middle" class="jian"
+                            href="javascript:void(0)"
+                            src="https://www.guojimami.com/themes/mbts1/images/flow_icon_p-.png" alt="minus">
+                        <input name="number" type="text" id="number" value="1" size="1" onblur="changePrice()"
+                            readonly="true">
+                        <img style="CURSOR: pointer; vertical-align:middle" class="jia"
+                            href="javascript:void(0)"
+                            src="https://www.guojimami.com/themes/mbts1/images/flow_icon_add.png" alt="plus"></span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <a class="dinggo">立即订购</a>
+        `
+            })
+            $("#SPEC_NUM_CONFIRM").html(html5);
         }
         AddClickEvent() {
             $("#rollList").find("li").click(function () {
-                let o = $(this).index();
-                console.log(o);
-
+                // let o = $(this).index();
                 $(this).addClass("selected").siblings().removeClass("selected");
-                $(".goodspic a").eq(o).addClass("activeimg").removeClass("activeimga").siblings().addClass("activeimga")
+                $(".activeimg").html($(this).html());
+                $(".max_box").html($(this).html())
+
+
 
             });
             $(".swiper-wrapper").find("div").click(function () {
                 $(this).addClass("tcxzs").removeClass("tcxzss").siblings().addClass("tcxzss").removeClass("tcxzs");
                 $(".addtopi").hide();
                 $(".fittings_g").addClass("addtocart").removeClass("fittings_g")
+
+                let a = this.querySelector(".jq").innerText;
+                console.log(a);
+                $(".shp").text(a)
+                $(".prices").text(a)
+
             })
 
             /*点击 隐藏/显示税费说明*/
@@ -330,36 +318,167 @@ $(() => {
                 $("#tax_show_list").show();
             });
 
+
+            $(".fittings_g").click(function () {
+                $(".go_buys_fixed").hide();
+                $("#SPEC_NUM_CONFIRM").show();
+                $("#page_dialog_bj").show();
+            })
+
+
+            /* 点击选择商品数量 */
+
+            let va = $("#number").val()
+
+            $(".jia").click(function () {
+                va++
+                console.log(va);
+                $("#number").val(va)
+            })
+            $(".jian").click(function () {
+                va--
+                $("#number").val(va)
+                if (va < 1) {
+                    alert("最小为1")
+                    $("#number").val(1)
+                }
+            })
+            /* 添加到购物袋 */
+            // $("#SPEC_NUM_CONFIRM .dinggo").click(function () {
+            //     if (val != 0) {
+            //         $("#SPEC_NUM_CONFIRM").hide();
+            //         $("#page_dialog_bj").hide();
+            //         $(".go_buys_fixed").show();
+            //         $("#cart_info_numbers").text(val)
+
+            /* 实现点击添加商品到购物车的功能 */
+            $("#SPEC_NUM_CONFIRM .dinggo").click(function () {
+                /* 检查是否已经登录 ，如果没有登录那就跳转到登录页面*/
+
+
+                if (!localStorage.username) {
+                    window.location.href = "http://127.0.0.1/code/gjmm/src/client/html/login.html";
+                }
+
+                /* 获取当前商品的ID */
+                let good_id = val
+                console.log(val);
+                let title = $(".name").text();
+                console.log(title);
+                let priceB = $(".shp").text();
+                console.log(priceB);
+                let index = priceB.split("￥")
+                let price = index[1];
+                console.log(price);
+                let num = va;
+                console.log(va);
+                let src = document.getElementsByClassName("zoom-tiny-image")[0].src
+                console.log(src);
+
+
+                $.ajax({
+                    url: "http://127.0.0.1/code/gjmm/src/server/cart.php",
+                    data: { type: "add", good_id: good_id, title: title, price: price, num: num, src: src },
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.status == "success") {
+                            $("#cart_info_numbers").text($("#cart_info_numbers").text() * 1 + 1);
+                        }
+                    }
+                });
+            })
+
+            /* 发请求获取购物车中商品的数量 */
+            /* 检查登录状态，如果已经登录那么就请求获取购物车的数量 */
+            if (localStorage.id) {
+                $.ajax({
+                    url: "http://127.0.0.1/code/gjmm/src/server/getTotalCount.php",
+                    data: {
+                        id: localStorage.id
+                    },
+                    dataType: "json",
+                    success: function ({ total }) {
+                        // console.log(total);
+                        $("#cart_info_numbers").text(total);
+                    }
+                });
+            }
+
+            /* 打开购物车页面 */
+            $(".head-shopcart").click(() => window.location.href = "http://127.0.0.1/code/gjmm/src/client/html/cart.html");
+
+
+
+
+            //     }
+
+            // })
+
+
+            /*  点击关闭商品选择 */
+            $("#buy_num_close").click(function () {
+                $("#SPEC_NUM_CONFIRM").hide();
+                $("#page_dialog_bj").hide();
+                $(".go_buys_fixed").show();
+            })
+
+
+            /* ///////// */
+        }
+
+        mouseenter() {
+
+            //min_box移入事件，显示遮罩
+            $(".min_box").hover(function () {
+                $(".zzhao").toggle();
+                $(".max_box").toggle();
+
+
+            });
+            //遮罩的移动事件
+            $(".min_box").mousemove(function (ev) {
+                //遮罩的坐标等于clientX减去遮罩宽度/高度的一半，这样鼠标就正好在正中间
+                var x = ev.pageX - $(".activeimg").get(0).offsetLeft - $(".zzhao").width() / 2 - 490;
+                var y = ev.pageY - $(".activeimg").get(0).offsetTop - $(".zzhao").height() / 2 - 280;
+                console.log(x, y);
+
+                //遮罩可移动的最大距离，盒子的宽度/高度-遮罩的宽度/高度
+                var maxX = $(".min_box").width() - $(".zzhao").width();
+                var maxY = $(".min_box").height() - $(".zzhao").height();
+                //设置最小移动范围
+                if (x < 0) {
+                    x = 0
+                }
+                if (y < 0) {
+                    y = 0
+                }
+                //设置最大移动范围
+                if (x > maxX) {
+                    x = maxX
+                }
+                if (y > maxY) {
+                    y = maxY
+                }
+                //设置遮罩的位置
+                $(".zzhao").css({
+                    top: y,
+                    left: x
+                });
+                //设置max_img的移动
+                var bilix = ($(".imga").width() - $(".max_box").width()) / maxX;
+                var biliy = ($(".imga").height() - $(".max_box").height()) / maxY;
+                $(".imga").css({
+                    top: -y * biliy,
+                    left: -x * bilix
+                });
+
+            });
         }
 
     }
 
 
 
-    let str = decodeURI(window.location.search.slice(1));
 
-
-    var data = str.split("=");
-    var val = data[1];
-
-
-    $.ajax({
-        type: "get",
-        url: "http://127.0.0.1/code/gjmm/src/server/pars.php",
-        // data: "data",
-        dataType: "json",
-        success: function (data) {
-            let item = data[val - 1]
-            console.log(item);
-            let oImg = document.getElementsByClassName("zoom-tiny-image")[0];
-            console.log(oImg);
-            oImg.src = item.srcA;
-            let oImgu = document.getElementsByClassName("goodspic")[0].getElementsByTagName("img")[0];
-            console.log(oImgu);
-            oImgu.src = item.srcA
-            $(".shp").text(item.priceA)
-            $(".name").text(item.title)
-        }
-    });
 
 })

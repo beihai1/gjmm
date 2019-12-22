@@ -1,3 +1,31 @@
+#goodss .goodss_js .goodss_js_middle .zzhao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, .3);
+    z-index: 999;
+    display: none;
+}
+#goodss .max_box{
+    width: 415px;
+    height: 319px;
+    position: absolute;
+    top: 28px;
+    left: 584px;
+    border: 1px solid red;
+    overflow: hidden;
+    display: none;
+    z-index: 3333;
+}
+#goodss .max_box .imga {
+    width: 675px;
+    height: 450px;
+    
+    position: absolute;
+}
+
 .gjmm_common_title {
     width: 1200px;
     margin: 60px auto 50px;
@@ -23,6 +51,7 @@
 #goodss {
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 #goodss .goodss_js {
     width: 1198px;
@@ -34,6 +63,7 @@
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     float: left;
+    position: relative;
 }
 #goodss .goodss_js .goodss_js_left {
     width: 120px;
@@ -91,11 +121,14 @@
     margin-left: 20px;
     padding-top: 30px;
     float: left;
+    
 }
 #goodss .goodss_js .goodss_js_middle .goodspic {
     float: left;
     width: 420px;
+    height: 420px;
     background-color: #ebebeb;
+    position: relative;
 }
 #goodss .goodss_js .goodss_js_middle .goodspic img {
     width: 420px;
@@ -181,7 +214,7 @@
     color: #fff;
     line-height: 20px;
     position: absolute;
-    left: 100px;
+    left: 80px;
     top: 8px;
     
 }
@@ -514,4 +547,98 @@
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     float: left;
+}
+
+
+#SPEC_NUM_CONFIRM {
+    width: 100%;
+    max-height: 60%;
+    display: none;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background-color: #fff;
+    z-index: 10000;
+}
+#buy {
+    width: 94%;
+    margin: 0px auto;
+    padding: 15px 0px;
+    font-family: Arial;
+    font-size: 12px;
+    color: #333;
+}
+#buy .img {
+    width: 30%;
+    text-align: left;
+    float: left;
+}
+#buy .img img {
+    width: 70px;
+}
+#buy .p_n {
+    width: 70%;
+    position: relative;
+    float: left;
+    
+}
+#buy .prices {
+    color: #ff2837;
+    font-size: 16px;
+    margin-top: 5px;
+}
+#buy .close_btn {
+    width: 12px;
+    position: absolute;
+    top: 6px;
+    right: 0px;
+}
+#buy .close_btn img {
+    width: 12px;
+}
+#buy .buy_num {
+    margin-top: 10px;
+}
+#buy .buy_num .s-p-l {
+    float: left;
+}
+#buy .buy_num img {
+    width: 16px;
+    height: 16px;
+    padding: 5px;
+}
+#buy .buy_num input {
+    width: 50px;
+    height: 24px;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 13px;
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    
+}
+#buy .buy_num img {
+    width: 16px;
+    height: 16px;
+    padding: 5px;
+    display: inline-block;
+}
+#SPEC_NUM_CONFIRM .dinggo {
+    display: block;
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    margin: 60px auto 15px;
+    background-color: #ff2837;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
 }

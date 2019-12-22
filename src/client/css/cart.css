@@ -1,0 +1,166 @@
+.main {
+    width: 1200px;
+    margin: 0 auto;
+}
+.gjmm_common_title {
+    width: 1200px;
+    margin: 60px auto 50px;
+    font-family: "PingFang SC Regular";
+    text-align: center;
+}
+.gjmm_common_title .tit_chi {
+    font-size: 24px;
+    line-height: 24px;
+    color: #333;
+}
+.gjmm_common_title .tit_chi span {
+    padding-right: 16px;
+    font-weight: bold;
+}
+.gjmm_common_title .tit_eng {
+    font-size: 14px;
+    line-height: 14px;
+    color: #969696;
+    padding-top: 10px;
+}
+#pflow #formCart .cartGoodsTitle {
+    height: 60px;
+    line-height: 60px;
+    font-family: "PingFang SC Regular";
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+#pflow #formCart .cartGoodsTitle .choose {
+    margin-left: 40px;
+    text-align: left;
+    float: left;
+}
+#pflow #formCart .cartGoodsTitle .goods {
+    margin-left: 2%;
+    text-align: left;
+    float: left;
+}
+.left {
+    float: left;
+}
+#pflow .cart_no_goods {
+    line-height: 30px;
+    text-align: center;
+    margin: 40px auto;
+    color: #b9b9b9;
+    font-size: 15px;
+    font-family: "PingFang SC Regular";
+}
+#pflow .cart_no_goods a {
+    display: block;
+    color: #ff9b00;
+    text-decoration: none;
+}
+.cart_one {
+    width: 1200px;
+    margin: 20px auto 110px;
+}
+.cart_one .cart_onetop {
+    width: 1140px;
+    padding: 20px 20px 20px 40px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+input, textarea {
+    border: 1px solid #e4e4e4;
+    background-color: #fdfdfd;
+    padding: 5px;
+    margin: 5px;
+}
+.cart_one .cart_onetop span font {
+    color: #ff2837;
+}
+.cart_one .cart_onebottom {
+    margin-top: 10px;
+    padding: 15px 0px;
+}
+input {
+    border: 1px solid #e4e4e4;
+    background-color: #fdfdfd;
+    padding: 5px;
+    margin: 5px;
+}
+#pflow .not_active_button_c9696 {
+    display: inline-block;
+    width: 190px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 16px;
+    background-color: #c3c3c3;
+    color: #fff;
+    border: solid 1px #c3c3c3;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    text-decoration: none;
+    margin-right: 8px;
+    float: left;
+    cursor: default;
+}
+.left {
+    float: left;
+}
+.cart_no_goods li{
+    float: left;
+}
+.cart_no_goods ul{
+    margin-bottom: 20px;
+}
+.cart_no_goods .price{
+    margin-left: 62px;
+}
+.cart_no_goods .title{
+    width: 443px;
+}
+.cart_no_goods .num{
+    margin-left: 100px;
+}
+.cart_no_goods .num img{
+    width: 11px;
+}
+.cart_no_goods .jian{
+    position: relative;
+    top: 21px;
+    left: -25px;
+}
+.cart_no_goods .jia{
+    position: relative;
+    top: -20px;
+    left: 25px;
+}
+.shanchu{
+   position: relative;
+    top: 13px;
+    left: 186px; 
+}
+.xiaoji{
+     position: relative;
+    top: 13px;
+    left: 102px; 
+}
+.cart_no_goods .imgss {
+    width: 70px;
+    height: 70px;
+    padding: 5px 4px;
+    border: solid 1px #ebebeb;
+    float: left;
+    
+}
+
